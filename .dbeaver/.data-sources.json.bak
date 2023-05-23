@@ -14,8 +14,31 @@
 				"configurationType": "MANUAL",
 				"home": "postgresql-x64-15",
 				"type": "dev",
-				"provider-properties": {},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
 				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-188017bd218-20eee5a05c877735": {
+			"postgres": {
+				"public": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202305142039\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-188017bd218-20eee5a05c877735\"\u003e\u003centity id\u003d\"1\" name\u003d\"albumperformer\" fq-name\u003d\"public.albumperformer\" order\u003d\"0\" color-bg\u003d\"204,192,184\" x\u003d\"539\" y\u003d\"391\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"albums\" fq-name\u003d\"public.albums\" order\u003d\"1\" color-bg\u003d\"204,192,184\" x\u003d\"295\" y\u003d\"372\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"collections\" fq-name\u003d\"public.collections\" order\u003d\"2\" color-bg\u003d\"204,192,184\" x\u003d\"534\" y\u003d\"217\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"genreperformer\" fq-name\u003d\"public.genreperformer\" order\u003d\"3\" color-bg\u003d\"204,192,184\" x\u003d\"302\" y\u003d\"497\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"genres\" fq-name\u003d\"public.genres\" order\u003d\"4\" color-bg\u003d\"204,192,184\" x\u003d\"66\" y\u003d\"511\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"performers\" fq-name\u003d\"public.performers\" order\u003d\"5\" color-bg\u003d\"204,192,184\" x\u003d\"537\" y\u003d\"497\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"7\" name\u003d\"trackcollection\" fq-name\u003d\"public.trackcollection\" order\u003d\"6\" color-bg\u003d\"204,192,184\" x\u003d\"283\" y\u003d\"234\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"8\" name\u003d\"tracks\" fq-name\u003d\"public.tracks\" order\u003d\"7\" color-bg\u003d\"204,192,184\" x\u003d\"43\" y\u003d\"364\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"albumperformer_album_id__fkey\" fq-name\u003d\"public.albumperformer.albumperformer_album_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"tracks_album_id_fkey\" fq-name\u003d\"public.tracks.tracks_album_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"8\"/\u003e\u003crelation name\u003d\"trackcollection_collection_id__fkey\" fq-name\u003d\"public.trackcollection.trackcollection_collection_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"genreperformer_genre_id__fkey\" fq-name\u003d\"public.genreperformer.genreperformer_genre_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"5\" fk-ref\u003d\"4\"/\u003e\u003crelation name\u003d\"albumperformer_performer_id__fkey\" fq-name\u003d\"public.albumperformer.albumperformer_performer_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"genreperformer_performer_id__fkey\" fq-name\u003d\"public.genreperformer.genreperformer_performer_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"4\"/\u003e\u003crelation name\u003d\"trackcollection_track_id__fkey\" fq-name\u003d\"public.trackcollection.trackcollection_track_id__fkey\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"7\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"
+						}
+					}
+				}
 			}
 		}
 	},

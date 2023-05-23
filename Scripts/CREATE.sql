@@ -1,31 +1,31 @@
 CREATE TABLE IF NOT EXISTS Albums (
 	Album_id SERIAL PRIMARY KEY,
-	Year_ SMALLINT,
-	Name VARCHAR(80)
+	Year_Album SMALLINT,
+	Name_album VARCHAR(80)
 );
 
 CREATE TABLE IF NOT EXISTS Tracks (
 	Track_id SERIAL PRIMARY KEY,
 	Duration SMALLINT,
-	Name VARCHAR(80),
+	Name_Track VARCHAR(80),
 	Album_id INTEGER not null references Albums(Album_id)
 );
 
 
 CREATE TABLE IF NOT EXISTS Genres (
 	Genre_id SERIAL PRIMARY KEY,
-	Name VARCHAR(80)
+	Name_Genres VARCHAR(80)
 );
 
 CREATE TABLE IF NOT EXISTS Performers (
 	Performer_id SERIAL PRIMARY KEY,
-	Name VARCHAR(80)
+	Name_Performers VARCHAR(80)
 );
 
 CREATE TABLE IF NOT EXISTS Collections (
 	Collection_id SERIAL PRIMARY KEY,
-	Year_ SMALLINT,
-	Name VARCHAR(80)
+	Year_Collection SMALLINT,
+	Name_Collection VARCHAR(80)
 );
 
 CREATE TABLE IF NOT EXISTS TrackCollection (
